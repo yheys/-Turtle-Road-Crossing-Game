@@ -23,12 +23,12 @@ while game_is_on:
     time.sleep(0.1)
     car.new_car()
     car.move()
-    if player.ycor()==280:
+    if player.ycor()>=280:
         level.updated_level()
         player.next_level()
         car.next_move()
-    for car in car.all_cars:
-        if car.distance(player)<10:
+    for one_car in car.all_cars:
+        if one_car.distance(player)<20:
             game_is_on=False
             level.end()
 

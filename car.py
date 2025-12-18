@@ -23,7 +23,6 @@ class Car:
 
     def move(self):
         for car in self.all_cars:
-            car.speed(2)
             car.bk(self.CAR_SPEED)
     def next_move(self):
         self.CAR_SPEED+=5
